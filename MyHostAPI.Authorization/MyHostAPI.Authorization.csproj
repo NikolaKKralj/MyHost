@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Interfaces\" />
+    <None Remove="Handlers\" />
+    <None Remove="Validations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Handlers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyHostAPI.Common\MyHostAPI.Common.csproj" />
+    <ProjectReference Include="..\MyHostAPI.Data\MyHostAPI.Data.csproj" />
+    <ProjectReference Include="..\MyHostAPI.Domain\MyHostAPI.Domain.csproj" />
+  </ItemGroup>
+</Project>

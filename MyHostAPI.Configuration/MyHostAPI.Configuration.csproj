@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.4.0" />
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
+    <PackageReference Include="MongoDB.Driver" Version="2.16.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />
+    <PackageReference Include="Quartz.Extensions.DependencyInjection" Version="3.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyHostAPI.Business\MyHostAPI.Business.csproj" />
+    <ProjectReference Include="..\MyHostAPI.Common\MyHostAPI.Common.csproj" />
+    <ProjectReference Include="..\MyHostAPI.Data\MyHostAPI.Data.csproj" />
+    <ProjectReference Include="..\MyHostAPI.Domain\MyHostAPI.Domain.csproj" />
+    <ProjectReference Include="..\MyHostAPI.Models\MyHostAPI.Models.csproj" />
+    <ProjectReference Include="..\MyHostAPI.Authorization\MyHostAPI.Authorization.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Microsoft.Extensions.Configuration" />
+    <None Remove="MongoDB.Driver" />
+    <None Remove="Microsoft.Extensions.Configuration.Binder" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.13.0" />
+    <PackageReference Include="GeoCoordinate.NetCore" Version="1.0.0.1" />
+    <PackageReference Include="Serilog" Version="2.11.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.21.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyHostAPI.Data\MyHostAPI.Data.csproj" />
+    <ProjectReference Include="..\MyHostAPI.Jobs\MyHostAPI.ScheduledServices.csproj" />
+    <ProjectReference Include="..\MyHostAPI.Models\MyHostAPI.Models.csproj" />
+    <ProjectReference Include="..\MyHostAPI.Authorization\MyHostAPI.Authorization.csproj" />
+    <ProjectReference Include="..\MyHostAPI.Reporting\MyHostAPI.Reporting.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Services\" />
+  </ItemGroup>
+</Project>
